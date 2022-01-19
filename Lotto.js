@@ -3,8 +3,12 @@ export default class Lotto {
         this.nRows = nRows;
         this.nCols = nCols;
         this.nSize = nSize;
+
+        this.lottoMatrix = new Array(nRows).fill(null);
+        for (let i = 0; i < this.lottoMatrix.length; i++) 
+            this.lottoMatrix[i] = new Array(nCols).fill(null);
         
-        this.lottoMatrix = new Array(nRows).fill(null).map(() => new Array(nCols));        
+        //this.lottoMatrix = new Array(nRows).fill(null).map(() => new Array(nCols));        
     }       
 
     sample() {
